@@ -12,7 +12,7 @@ export default function ColorConverter() {
     if (event.target.value.length === 7) {
       if (/^#[0-9A-Fa-f]{6}$/.test(inputHex)) {
         setError(null);
-        const hex = inputHex.substring(1); // remove the '#' character
+        const hex = inputHex.substring(1);
         const bigint = parseInt(hex, 16);
         const r = (bigint >> 16) & 255;
         const g = (bigint >> 8) & 255;
